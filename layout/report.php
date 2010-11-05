@@ -54,37 +54,23 @@ echo $OUTPUT->doctype() ?>
 
 <?php } ?>
 <!-- END OF HEADER -->
+
 <div id="page-content-wrapper" class="wrapper clearfix">
     <div id="page-content">
-        <div id="region-main-box">
-            <div id="region-post-box">
-            
-                <div id="region-main-wrap">
-                    <div id="region-main">
-                        <div class="region-content">
-                            <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
-                        </div>
-                    </div>
-                </div>
-                
-                <?php if ($hassidepre) { ?>
-                <div id="region-pre" class="block-region">
-                    <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-                    </div>
-                </div>
-                <?php } ?>
-                
-                <?php if ($hassidepost) { ?>
-                <div id="region-post" class="block-region">
-                    <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-post') ?>
-                    </div>
-                </div>
-                <?php } ?>
-                
+        <div id="report-main-content">
+            <div class="region-content">
+                <?php echo core_renderer::MAIN_CONTENT_TOKEN ?>
             </div>
         </div>
+        <?php if ($hassidepre) { ?>
+        <div id="report-region-wrap">
+            <div id="report-region-pre" class="block-region">
+                <div class="region-content">
+                    <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
     </div>
 </div>
 
